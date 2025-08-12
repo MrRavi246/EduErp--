@@ -103,9 +103,10 @@
     <Content Include="pages\student\courses.aspx" />
     <Content Include="pages\student\dashboard.aspx" />
     <Content Include="pages\student\exams.aspx" />
-    <Content Include="pages\student\fee.aspx" />
+    <Content Include="pages\student\fees.aspx" />
     <Content Include="pages\student\master.aspx" />
     <Content Include="pages\student\notices.aspx" />
+    <Content Include="pages\student\profile.aspx" />
     <Content Include="pages\student\settings.aspx" />
     <Content Include="pages\student\timetable.aspx" />
     <Content Include="Web.config" />
@@ -300,12 +301,12 @@
     <Compile Include="pages\student\exams.Master.designer.cs">
       <DependentUpon>exams.Master</DependentUpon>
     </Compile>
-    <Compile Include="pages\student\fee.aspx.cs">
-      <DependentUpon>fee.aspx</DependentUpon>
+    <Compile Include="pages\student\fees.aspx.cs">
+      <DependentUpon>fees.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\student\fee.aspx.designer.cs">
-      <DependentUpon>fee.aspx</DependentUpon>
+    <Compile Include="pages\student\fees.aspx.designer.cs">
+      <DependentUpon>fees.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\student\fee.Master.cs">
       <DependentUpon>fee.Master</DependentUpon>
@@ -334,6 +335,13 @@
     </Compile>
     <Compile Include="pages\student\notices.Master.designer.cs">
       <DependentUpon>notices.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\student\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\student\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\student\profile.Master.cs">
       <DependentUpon>profile.Master</DependentUpon>
