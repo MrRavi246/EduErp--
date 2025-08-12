@@ -67,29 +67,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EduErp_DB.mdf" />
-    <Content Include="App_Data\EduErp_DB_log.ldf">
-      <DependentUpon>EduErp_DB.mdf</DependentUpon>
-    </Content>
     <Content Include="assets\css\common.css" />
     <Content Include="assets\js\common.js" />
     <Content Include="index.aspx" />
-    <Content Include="pages\admin\attendance.html" />
-    <Content Include="pages\admin\attendance_fixed.html" />
-    <Content Include="pages\admin\courses.html" />
-    <Content Include="pages\admin\course_management.html" />
-    <Content Include="pages\admin\dashboard.html" />
-    <Content Include="pages\admin\exams.html" />
-    <Content Include="pages\admin\faculty.html" />
-    <Content Include="pages\admin\faculty_fixed.html" />
-    <Content Include="pages\admin\fees.html" />
-    <Content Include="pages\admin\notices.html" />
-    <Content Include="pages\admin\profile.html" />
-    <Content Include="pages\admin\reports.html" />
-    <Content Include="pages\admin\settings.html" />
-    <Content Include="pages\admin\students.html" />
-    <Content Include="pages\admin\students_fixed.html" />
-    <Content Include="pages\admin\timetable.html" />
+    <Content Include="pages\admin\attendance.aspx" />
+    <Content Include="pages\admin\courses.aspx" />
+    <Content Include="pages\admin\course_management.aspx" />
+    <Content Include="pages\admin\dashboard.aspx" />
+    <Content Include="pages\admin\exams.aspx" />
+    <Content Include="pages\admin\faculty.aspx" />
+    <Content Include="pages\admin\fees.aspx" />
+    <Content Include="pages\admin\notices.aspx" />
+    <Content Include="pages\admin\profile.aspx" />
+    <Content Include="pages\admin\reports.aspx" />
+    <Content Include="pages\admin\settings.aspx" />
+    <Content Include="pages\admin\students.aspx" />
+    <Content Include="pages\admin\timetable.aspx" />
     <Content Include="pages\faculty\attendance.aspx" />
     <Content Include="pages\faculty\courses.aspx" />
     <Content Include="pages\faculty\dashboard.aspx" />
@@ -118,6 +111,188 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\attendance.aspx.cs">
+      <DependentUpon>attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\attendance.aspx.designer.cs">
+      <DependentUpon>attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\attendance.Master.cs">
+      <DependentUpon>attendance.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\attendance.Master.designer.cs">
+      <DependentUpon>attendance.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\courses.aspx.cs">
+      <DependentUpon>courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\courses.aspx.designer.cs">
+      <DependentUpon>courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\courses.Master.cs">
+      <DependentUpon>courses.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\courses.Master.designer.cs">
+      <DependentUpon>courses.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\course_management.aspx.cs">
+      <DependentUpon>course_management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\course_management.aspx.designer.cs">
+      <DependentUpon>course_management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\course_managements.Master.cs">
+      <DependentUpon>course_managements.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\course_managements.Master.designer.cs">
+      <DependentUpon>course_managements.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\dashboard.Master.cs">
+      <DependentUpon>dashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\dashboard.Master.designer.cs">
+      <DependentUpon>dashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\exams.aspx.cs">
+      <DependentUpon>exams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\exams.aspx.designer.cs">
+      <DependentUpon>exams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\exams.Master.cs">
+      <DependentUpon>exams.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\exams.Master.designer.cs">
+      <DependentUpon>exams.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\faculty.aspx.cs">
+      <DependentUpon>faculty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\faculty.aspx.designer.cs">
+      <DependentUpon>faculty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\faculty.Master.cs">
+      <DependentUpon>faculty.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\faculty.Master.designer.cs">
+      <DependentUpon>faculty.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\fees.aspx.cs">
+      <DependentUpon>fees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\fees.aspx.designer.cs">
+      <DependentUpon>fees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\fees.Master.cs">
+      <DependentUpon>fees.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\fees.Master.designer.cs">
+      <DependentUpon>fees.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\notices.aspx.cs">
+      <DependentUpon>notices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\notices.aspx.designer.cs">
+      <DependentUpon>notices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\notices.Master.cs">
+      <DependentUpon>notices.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\notices.Master.designer.cs">
+      <DependentUpon>notices.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\profile.Master.cs">
+      <DependentUpon>profile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\profile.Master.designer.cs">
+      <DependentUpon>profile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\reports.aspx.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\reports.aspx.designer.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\reports.Master.cs">
+      <DependentUpon>reports.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\reports.Master.designer.cs">
+      <DependentUpon>reports.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\settings.Master.cs">
+      <DependentUpon>settings.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\settings.Master.designer.cs">
+      <DependentUpon>settings.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\students.aspx.cs">
+      <DependentUpon>students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\students.aspx.designer.cs">
+      <DependentUpon>students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\students.Master.cs">
+      <DependentUpon>students.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\students.Master.designer.cs">
+      <DependentUpon>students.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\timetable.aspx.cs">
+      <DependentUpon>timetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\timetable.aspx.designer.cs">
+      <DependentUpon>timetable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\admin\timetable.Master.cs">
+      <DependentUpon>timetable.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\admin\timetable.Master.designer.cs">
+      <DependentUpon>timetable.Master</DependentUpon>
     </Compile>
     <Compile Include="pages\faculty\attendance.aspx.cs">
       <DependentUpon>attendance.aspx</DependentUpon>
@@ -408,6 +583,19 @@
     <Content Include="pages\faculty\settings.Master" />
     <Content Include="pages\faculty\students.Master" />
     <Content Include="pages\faculty\timetable.Master" />
+    <Content Include="pages\admin\attendance.Master" />
+    <Content Include="pages\admin\courses.Master" />
+    <Content Include="pages\admin\course_managements.Master" />
+    <Content Include="pages\admin\dashboard.Master" />
+    <Content Include="pages\admin\exams.Master" />
+    <Content Include="pages\admin\faculty.Master" />
+    <Content Include="pages\admin\fees.Master" />
+    <Content Include="pages\admin\notices.Master" />
+    <Content Include="pages\admin\profile.Master" />
+    <Content Include="pages\admin\reports.Master" />
+    <Content Include="pages\admin\settings.Master" />
+    <Content Include="pages\admin\students.Master" />
+    <Content Include="pages\admin\timetable.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
