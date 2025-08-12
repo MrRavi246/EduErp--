@@ -4,19 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 
-
-namespace EduErp
+namespace EduErp.pages.faculty
 {
-    public partial class index : System.Web.UI.Page
+    public partial class notices : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void BtnSubmit_click(object sender, EventArgs e)
         {
 
         }
