@@ -67,9 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EduErp_DB.mdf" />
-    <Content Include="App_Data\EduErp_DB_log.ldf">
-      <DependentUpon>EduErp_DB.mdf</DependentUpon>
+    <Content Include="App_Data\EduErp.mdf" />
+    <Content Include="App_Data\EduErp_log.ldf">
+      <DependentUpon>EduErp.mdf</DependentUpon>
     </Content>
     <Content Include="assets\css\common.css" />
     <Content Include="assets\js\common.js" />
