@@ -46,6 +46,11 @@ namespace EduErp.pages.faculty
             cmd = new SqlCommand(checkQuery, con);
             object existingUser = cmd.ExecuteScalar();
 
+
+
+
+
+
             if (existingUser != null)
             {
                 Response.Write("<script>alert('Email " + Email + " is already registered!');</script>");
