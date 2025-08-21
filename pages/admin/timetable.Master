@@ -39,34 +39,34 @@
                                 <p class="text-muted small">Timetable Management</p>
                             </div>
                             <nav class="nav flex-column">
-                                <a class="nav-link text-dark" href="dashboard.html">
+                                <a class="nav-link text-dark" href="dashboard.aspx">
                                     <i class="fas fa-tachometer-alt me-2 text-primary"></i>Dashboard
                                 </a>
-                                <a class="nav-link text-dark" href="students.html">
+                                <a class="nav-link text-dark" href="students.aspx">
                                     <i class="fas fa-user-graduate me-2 text-primary"></i>Students
                                 </a>
-                                <a class="nav-link text-dark" href="faculty.html">
+                                <a class="nav-link text-dark" href="faculty.aspx">
                                     <i class="fas fa-chalkboard-teacher me-2 text-primary"></i>Faculty
                                 </a>
-                                <a class="nav-link text-dark" href="courses.html">
+                                <a class="nav-link text-dark" href="courses.aspx">
                                     <i class="fas fa-book me-2 text-primary"></i>Courses
                                 </a>
-                                <a class="nav-link text-dark" href="attendance.html">
+                                <a class="nav-link text-dark" href="attendance.aspx">
                                     <i class="fas fa-calendar-check me-2 text-primary"></i>Attendance
                                 </a>
-                                <a class="nav-link active" href="timetable.html">
+                                <a class="nav-link active" href="timetable.aspx">
                                     <i class="fas fa-clock me-2 text-primary"></i>Timetable
                                 </a>
-                                <a class="nav-link text-dark" href="exams.html">
+                                <a class="nav-link text-dark" href="exams.aspx">
                                     <i class="fas fa-file-alt me-2 text-primary"></i>Exams & Results
                                 </a>
-                                <a class="nav-link text-dark" href="fees.html">
+                                <a class="nav-link text-dark" href="fees.aspx">
                                     <i class="fas fa-credit-card me-2 text-primary"></i>Fees
                                 </a>
-                                <a class="nav-link text-dark" href="notices.html">
+                                <a class="nav-link text-dark" href="notices.aspx">
                                     <i class="fas fa-bullhorn me-2 text-primary"></i>Notice Board
                                 </a>
-                                <a class="nav-link text-dark" href="reports.html">
+                                <a class="nav-link text-dark" href="reports.aspx">
                                     <i class="fas fa-chart-bar me-2 text-primary"></i>Reports
                                 </a>
                             </nav>
