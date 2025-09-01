@@ -37,50 +37,40 @@ namespace EduErp.pages.faculty
             string LastName = txtLastName.Text;
             string Email = txtEmail.Text;
             string Phone = txtPhone.Text;
-            string Department = ddDepartment.SelectedValue;
-            string Year = ddYear.SelectedValue;
+            int Department = ddDepartment.SelectedIndex;
+            int Year = ddYear.SelectedIndex;
 
-            // Check if email already exists first
             getcon();
-            string checkQuery = "SELECT user_id FROM users WHERE email = '" + Email + "'";
+            string checkQuery = "SELECT id FROM users WHERE email = '" + Email + "'";
             cmd = new SqlCommand(checkQuery, con);
-            object existingUser = cmd.ExecuteScalar();
 
+            DataTable dt = new DataTable();
+            using (SqlDataAdapter da = new SqlDataAdapter(checkQuery, con))
+            {
+                da.Fill(dt);
+            }
 
-
-
-
-
-            if (existingUser != null)
+            if (dt.Rows.Count > 0)
             {
                 Response.Write("<script>alert('Email " + Email + " is already registered!');</script>");
                 con.Close();
                 return;
             }
-            con.Close();
-
-            // If email doesn't exist, proceed with insertion
             getcon();
-
-            // Insert into users table and get the new user ID
             string userQuery = "INSERT INTO users (email, password_hash, role, is_active) " +
-                              "OUTPUT INSERTED.user_id " +
-                              "VALUES ('" + Email + "', '" + (FirstName + Year) + "', 'student', 1)";
-
+                               "OUTPUT INSERTED.id " +
+                               "VALUES ('" + Email + "', '" + (FirstName + Year) + "', 'student', 1)";
             cmd = new SqlCommand(userQuery, con);
             int newUserId = (int)cmd.ExecuteScalar();
 
-            // Insert into students table
             string studentQuery = "INSERT INTO students (user_id, student_id, roll_number, first_name, last_name, phone, department_id, year_level, status) " +
-                                 "VALUES (" + newUserId + ", 'STU" + newUserId.ToString("000") + "', '" + DateTime.Now.Year + "CS" + newUserId.ToString("000") + "', " +
-                                 "'" + FirstName + "', '" + LastName + "', '" + Phone + "', " + Department + ", '" + Year + "', 'Active')";
-
+                                  "VALUES (" + newUserId + ", 'STU" + newUserId.ToString("000") + "', '" + DateTime.Now.Year + "CS" + newUserId.ToString("000") + "', " +
+                                  "'" + FirstName + "', '" + LastName + "', '" + Phone + "', " + Department + ", '" + Year + "', 'Active')";
             cmd = new SqlCommand(studentQuery, con);
             cmd.ExecuteNonQuery();
 
             Response.Write("<script>alert('Student added successfully!');</script>");
 
-            // Clear form fields
             txtFirstName.Text = "";
             txtLastName.Text = "";
             txtEmail.Text = "";
@@ -89,6 +79,7 @@ namespace EduErp.pages.faculty
             ddYear.SelectedIndex = 0;
 
             con.Close();
+
 
         }
     }
