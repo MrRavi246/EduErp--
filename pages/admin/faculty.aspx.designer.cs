@@ -78,22 +78,22 @@ namespace EduErp.pages.admin
         protected global::System.Web.UI.WebControls.DropDownList faculty_Department;
 
         /// <summary>
-        /// Designation control.
+        /// faculty_Designation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Designation;
+        protected global::System.Web.UI.WebControls.DropDownList faculty_Designation;
 
         /// <summary>
-        /// Qualification control.
+        /// faculty_Qualification control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Qualification;
+        protected global::System.Web.UI.WebControls.TextBox faculty_Qualification;
 
         /// <summary>
         /// faculty_experience control.

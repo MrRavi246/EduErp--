@@ -204,9 +204,9 @@
 
                                 <div class="card shadow-sm mb-4">
                                     <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover">
-                                                <tbody>
+                                        <div class="card shadow-sm">
+                                            <table class="card shadow-sm">
+                                                <tbody class="table-light">
                                                     <asp:GridView ID="GridView1" DataKeyNames="id" runat="server" AutoGenerateColumns="False">
                                                         <Columns>
 
@@ -314,7 +314,7 @@
                             <div class="col-md-6">
                                 <label class="form-label">
                                     Designation</label>
-                                <asp:DropDownList ID="Designation" runat="server" CssClass="form-select" required="true">
+                                <asp:DropDownList ID="faculty_Designation" runat="server" CssClass="form-select" required="true">
                                     <asp:ListItem Text="Choose..." Value="" />
                                     <asp:ListItem Text="Professor" Value="Professor" />
                                     <asp:ListItem Text="Associate Professor" Value="Associate Professor" />
@@ -325,7 +325,7 @@
                             <div class="col-md-6">
                                 <label class="form-label">
                                     Qualification</label>
-                                <asp:TextBox ID="Qualification" runat="server" class="form-control" placeholder="e.g., Ph.D Computer Science"></asp:TextBox>
+                                <asp:TextBox ID="faculty_Qualification" runat="server" class="form-control" placeholder="e.g., Ph.D Computer Science"></asp:TextBox>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">

@@ -65,11 +65,33 @@ namespace EduErp.pages.admin
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+
+            string FirstName = faculty_fname.Text;
+            string LastName = faculty_lname.Text;
+            string Email = faculty_email.Text;
+            string Phone = faculty_phone.Text;
+            //string Department = faculty_Department.SelectedIndex;
+            string Address = faculty_address.Text;
+            string Experince = faculty_experience.Text;
+            string Designation = faculty_Designation.SelectedValue;
+            string Qualification = faculty_Qualification.Text;
+    
+
+
+
             if (Button2.Text == "Add")
             {
+
+                string userQuery = "INSERT INTO users (email, password_hash, role, is_active) " +
+                   "OUTPUT INSERTED.id " +
+                   "VALUES ('" + Email + "', '" + (FirstName) + "', 'faculty', 1)";
+                cmd = new SqlCommand(userQuery, con);
+                int newUserId = (int)cmd.ExecuteScalar();
+
+
                 getcon();                
                 cmd = new SqlCommand("INSERT INTO faculty (first_name,last_name, Phone, department_id, Designation, qualification, experience_years, address) " 
-                    + "Values('" + faculty_fname.Text + "','" + faculty_lname.Text + "','" + faculty_phone.Text + "','" + faculty_Department.SelectedValue + "','"+ Designation.SelectedValue + "','"+ Qualification.Text+ "','"+ faculty_experience.Text+ "','"+ faculty_address.Text+ "')", con);
+                    + "Values('" + faculty_fname.Text + "','" + faculty_lname.Text + "','" + faculty_phone.Text + "','" + faculty_Department.SelectedValue + "','"+ faculty_Designation.SelectedValue + "','"+ faculty_Qualification.Text+ "','"+ faculty_experience.Text+ "','"+ faculty_address.Text+ "')", con);
                 cmd.ExecuteNonQuery();
                 //clear();
             }
