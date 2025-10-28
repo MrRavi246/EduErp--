@@ -20,13 +20,12 @@ namespace EduErp.pages.admin
         SqlDataAdapter adapter;
         DataSet dataSet;
         SqlCommand cmd;
-        String fnm;
         protected void Page_Load(object sender, EventArgs e)
         {
             getcon();
             if (!IsPostBack)
             {
-                fillgrid(); // Load data only on first page load
+                fillgrid();
             }
         }
 
@@ -35,23 +34,6 @@ namespace EduErp.pages.admin
             con = new SqlConnection(s);
             con.Open();
         }
-
-        //void clear()
-        //{
-        //    faculty_fname.Text = " ";
-        //}
-
-
-        //void imgupload()
-        //{
-        //    if (fldimg.HasFile)
-        //    {
-        //        fnm = "images/" + fldimg.FileName;
-        //        fldimg.SaveAs(Server.MapPath(fnm));
-        //    }
-        //}
-
-
         void fillgrid()
         {
             getcon();
@@ -67,15 +49,10 @@ namespace EduErp.pages.admin
         {
             if (Button2.Text == "Add")
             {
-                getcon();                
-                cmd = new SqlCommand("INSERT INTO faculty (first_name,last_name, Phone, department_id, Designation, qualification, experience_years, address) " 
-                    + "Values('" + faculty_fname.Text + "','" + faculty_lname.Text + "','" + faculty_phone.Text + "','" + faculty_Department.SelectedValue + "','"+ Designation.SelectedValue + "','"+ Qualification.Text+ "','"+ faculty_experience.Text+ "','"+ faculty_address.Text+ "')", con);
+                getcon();
+                cmd = new SqlCommand("INSERT INTO faculty (first_name,last_name, Phone, department_id, Designation, qualification, experience_years, address) "
+                    + "Values('" + faculty_fname.Text + "','" + faculty_lname.Text + "','" + faculty_phone.Text + "','" + faculty_Department.SelectedValue + "','" + Designation.SelectedValue + "','" + Qualification.Text + "','" + faculty_experience.Text + "','" + faculty_address.Text + "')", con);
                 cmd.ExecuteNonQuery();
-                //clear();
-            }
-            else
-            {
-                //cmd = new SqlCommand("update std_table set name='" + txtnum.Text + "',gender='" + rdegen.Text + "',city='" + city.Text + "' where id='" + ViewState["Id"] + "'", con);
             }
         }
 

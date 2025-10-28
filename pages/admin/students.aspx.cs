@@ -23,7 +23,10 @@ namespace EduErp.pages.admin
         protected void Page_Load(object sender, EventArgs e)
         {
             getcon();
-
+            if (!IsPostBack)
+            {
+                fillgrid();
+            }
         }
 
         void getcon()
@@ -31,7 +34,18 @@ namespace EduErp.pages.admin
             con = new SqlConnection(conString);
             con.Open();
         }
-        
+
+        void fillgrid()
+        {
+            getcon();
+            da = new SqlDataAdapter("select * from students", con);
+            ds = new DataSet();
+            da.Fill(ds);
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+            con.Close();
+        }
+
         protected void btnAddStudent_Click(object sender, EventArgs e)
         {
             string FirstName = txtFirstName.Text;
