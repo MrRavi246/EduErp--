@@ -80,7 +80,6 @@ namespace EduErp.pages.faculty
 
             con.Close();
 
-
         }
     }
 }
